@@ -673,10 +673,10 @@ Question:
 SEARCH_QUERY_PROMPT_LENGTH_THRESHOLD = PersistentConfig(
     "SEARCH_QUERY_PROMPT_LENGTH_THRESHOLD",
     "task.search.prompt_length_threshold",
-    os.environ.get(
+    int(os.environ.get(
         "SEARCH_QUERY_PROMPT_LENGTH_THRESHOLD",
         100,
-    ),
+    )),
 )
 
 ####################################
